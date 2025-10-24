@@ -5,11 +5,7 @@ import React from "react";
 const Register = async () => {
   await requireUnauth();
 
-  return (
-    <div>
-      <RegisterForm />
-    </div>
-  );
+  return <RegisterForm />;
 };
 
 export default Register;

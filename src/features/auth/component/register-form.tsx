@@ -30,7 +30,7 @@ import { authClient } from "@/lib/auth-client";
 const registerSchema = z
   .object({
     email: z.email("Please enter a valid email address"),
-    password: z.string().min(6, "Password must be at least 6 characters long"),
+    password: z.string().min(8, "Password must be at least 6 characters long"),
     confirmPassword: z.string(),
   })
   .refine((data) => data.password === data.confirmPassword, {
@@ -93,6 +93,12 @@ const RegisterForm = () => {
                     type="button"
                     disabled={isPending}
                   >
+                    <Image
+                      src="/logos/github.svg"
+                      width={20}
+                      height={20}
+                      alt="github"
+                    />
                     Continue with GitHub
                   </Button>
                   <Button
@@ -101,6 +107,12 @@ const RegisterForm = () => {
                     type="button"
                     disabled={isPending}
                   >
+                    <Image
+                      src="/logos/google.svg"
+                      width={20}
+                      height={20}
+                      alt="google"
+                    />
                     Continue with Google
                   </Button>
                 </div>
