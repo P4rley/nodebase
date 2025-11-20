@@ -15,7 +15,7 @@ export const InitialNode = memo((props: NodeProps) => {
       <WorkflowNode
         name="Initial Node"
         description="Click to add a node"
-        showToolbar={!selectorOpen}
+        showToolbar={false}
       >
         <PlaceholderNode {...props} onClick={() => setSelectorOpen(true)}>
           <div className="cursor-pointer flex items-center justify-center">
